@@ -1,0 +1,12 @@
+---
+description: Shared EvidenceLens engineering and evidence requirements
+alwaysApply: true
+---
+
+# EvidenceLens rules
+
+Read and follow the repository root AGENTS.md. It is the shared source of truth across coding agents.
+Read docs/engineering-standards.md for standards relevant to the current change.
+Load only matching skills from .agents/skills; see docs/agent-tooling.md for their scope.
+Prefer framework capabilities over custom boilerplate. Do not generate speculative services or abstractions.
+For example, use the selected validation library's schema handling rather than duplicating request-validation infrastructure.

@@ -1,0 +1,50 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Frontend
+node_modules/
+.next/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Generated data and model artifacts
+data/raw/
+data/processed/
+data/indexes/
+models/
+*.sqlite
+*.sqlite3
+*.canvas.data.json
+*.log
+
+# Infrastructure state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+
+# Agent local state (shared rules and skills are committed)
+.claude/settings.local.json
+.codex/config.local.toml

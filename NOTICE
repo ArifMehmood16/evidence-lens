@@ -1,0 +1,9 @@
+EvidenceLens
+Copyright 2026 Arif Mehmood and contributors
+
+This project contains adapted guidance from ECC (affaan-m/ECC),
+Copyright (c) 2026 Affaan Mustafa, licensed under the MIT License.
+The affected files are .agents/skills/search-first/SKILL.md and
+.agents/skills/verification-loop/SKILL.md.
+See third_party/ecc/LICENSE and docs/agent-tooling.md for attribution,
+the pinned source revision, and the adaptations made.
