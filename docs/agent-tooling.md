@@ -36,7 +36,9 @@ Small behavior-preserving fixes can keep scope and verification in the PR. Chang
 - .agents/skills/rag-change-evaluation and frontend-release-review: original project skills, invoked within the same feature.
 - .agents/skills/speckit-*, .claude/skills/speckit-*, .cursor/skills/speckit-*: official generated agent integrations; keep project policy out of these managed files.
 
-These are agent instructions and review gates, not a claim that an LLM is mechanically prevented from ignoring them. CI checks template resolution, prerequisite behavior, preservation of existing plans, upstream file integrity, and authored Markdown. Application tests and security/evaluation gates must be added with the corresponding implementation.
+These are agent instructions and review gates, not a claim that an LLM is mechanically prevented from ignoring them. Local checks cover template resolution, prerequisite behavior, preservation of existing plans, upstream file integrity, and authored Markdown. Application tests and security/evaluation gates must be added with the corresponding implementation.
+
+GitHub Actions is disabled throughout project development until the user explicitly requests it. Do not create, enable, dispatch, or restore workflows based on toolkit suggestions or roadmap milestones. Verification stays local; the absence of remote CI is intentional, not a release-evidence gap.
 
 Markdown style checks exclude generated upstream skills and core templates so upgrades do not require unrelated formatting patches. Manifest hashes check those managed assets; project policy, overrides, and adapted ECC skills remain linted.
 
@@ -75,6 +77,10 @@ Run the tooling tests and lint after changes:
 ```sh
 python3 -m unittest discover -s tests/tooling -v
 npx --yes markdownlint-cli2@0.18.1
+for script in .specify/scripts/bash/*.sh; do
+  bash -n "$script" || exit 1
+done
+git diff --check
 ```
 
 Ordinary ChatGPT chats do not automatically load repository files. Supply AGENTS.md, the constitution, relevant feature artifacts, and skills through the available repository/document workflow. Editor discovery and model adherence require review; a committed skill is not proof that every host executed it.

@@ -4,6 +4,8 @@ Proposed repository policy, 19 October 2026. These requirements guide implementa
 
 ## Purposeful implementation
 
+GitHub Actions is deferred for the whole development project until the user explicitly instructs its introduction. Run applicable checks locally and preserve their evidence. Do not treat toolkit defaults, roadmap phases, or publishing code as permission to enable Actions or add workflows.
+
 Every change must address an agreed requirement, measured failure, or documented operational need. Prefer a small working vertical slice. Avoid speculative services, unused interfaces, generated scaffolding, duplicated configuration, and abstractions with no demonstrated variation. Line count is neither a delivery target nor a quality metric.
 
 Before writing infrastructure code, check the existing codebase and maintained libraries for the capability. Record a consequential dependency choice with its purpose, alternatives, maintenance status, license, operational cost, and replacement boundary. Use libraries for validation, migrations, authentication integrations, parsing, retries, telemetry, and accessible UI primitives where they meet the requirements. Do not rebuild mature capabilities merely to showcase code.

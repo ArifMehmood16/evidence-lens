@@ -8,6 +8,8 @@ metadata:
 
 # Verify the actual change
 
+Run checks locally. Do not create, enable, or dispatch GitHub Actions unless the user explicitly requests it; remote CI is intentionally deferred for this project.
+
 Adapted from affaan-m/ECC at 76aaa77df6adc5b889e689007bf99b9a4f74af34.
 See ../../../third_party/ecc/LICENSE and ../../../docs/agent-tooling.md.
 

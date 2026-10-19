@@ -49,6 +49,8 @@ Read the [engineering standards](docs/engineering-standards.md), [contribution w
 
 ## Roadmap and current use
 
+Development checks run locally. GitHub Actions is disabled and will only be introduced upon the project owner's explicit instruction. See the [local verification commands](docs/agent-tooling.md).
+
 The project progresses through evidence contracts, ingestion, a usable baseline, retrieval optimization, claim verification, a cloud pilot, scale experiments, failure recovery, and portfolio publication. There is no runnable application or installation command yet. The useful starting point today is the architecture and development plan.
 
 The project is built around reproducible experiments: what failed, what changed, how quality and operational behavior changed, and what the change cost. Ten million documents is a long-term capacity scenario; every release will state the largest workload actually tested. No zero-hallucination or clinical-validation claim is made.

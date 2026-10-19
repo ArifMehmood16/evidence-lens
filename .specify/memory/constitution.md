@@ -22,6 +22,8 @@ Each substantial change MUST define observable acceptance criteria and applicabl
 
 ## V. Completion requires evidence
 
+Verification MUST run locally during project development. GitHub Actions MUST remain disabled; do not add, enable, dispatch, or restore workflows until the user explicitly requests it. Roadmap phases, toolkit defaults, and release readiness do not grant that authorization. Local quality checks remain required where applicable.
+
 Tasks MUST trace to requirements and include applicable verification work. Tests are required for meaningful behavior, security boundaries, and recovery contracts; avoid tests that mirror implementation or merely raise coverage. Implementation MUST record passed, failed, and not-run checks in verification.md, including commands, outcomes, scope, and limitations. Unrun checks never count as passes.
 
 Convergence MUST assess implementation and verification evidence against spec, plan, tasks, and these principles. Missing required evidence is unfinished work. Preserve Spec Kit's append-only convergence contract: append remediation tasks without rewriting intent or implementation. Implementation then fixes gaps and refreshes evidence. Blocking failures or unmet acceptance criteria prevent completion; exceptions require a rationale, owner, and expiry and cannot override user instructions or evidence/security invariants.
@@ -30,4 +32,6 @@ Convergence MUST assess implementation and verification evidence against spec, p
 
 AGENTS.md routes agents here; docs/engineering-standards.md holds detailed policy. Templates in .specify/templates/overrides/ implement these requirements for all integrations. Project policy takes precedence over generic toolkit examples. User instructions retain precedence. Amend the constitution and affected templates together; explain the change and migration in the PR. Version breaking governance changes as major, new principles as minor, and clarifications as patch. Keep feature specs current using Git history; never rewrite requirements merely to make failing work pass.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-19 | **Last Amended**: 2026-10-19
+Amendment 1.1.0: the user's project-wide instruction defers GitHub Actions until explicitly requested. Existing workflow configuration is removed; verification remains local. No application migration is required.
+
+**Version**: 1.1.0 | **Ratified**: 2026-10-19 | **Last Amended**: 2026-10-19

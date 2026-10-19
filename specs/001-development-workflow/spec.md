@@ -4,6 +4,8 @@
 
 **Input**: Integrate Spec Kit and ECC throughout EvidenceLens, rather than for one pilot feature.
 
+**Scope amendment, 2026-10-19:** the user explicitly deferred GitHub Actions for the entire development project. Verification is local until the user explicitly authorizes Actions later.
+
 ## Problem and scope
 
 Contributors need one durable, reproducible way to specify and validate work across the entire application. Install the official Spec Kit integrations and connect the existing selected ECC skills through shared governance and templates. Application implementation, global editor settings, automatic agent execution, and installing the full ECC collection are out of scope.
@@ -40,7 +42,7 @@ A clone has no current-feature pointer; contributors must select their feature. 
 - **FR-004**: Implementation MUST include ECC verification evidence, applicable specialist checks, and convergence against that evidence.
 - **FR-005**: Workflow guidance MUST cover all application areas and later roadmap phases, with a small-fix route.
 - **FR-006**: Preserve local state isolation, existing artifacts, Apache project licensing, and upstream MIT attribution; no automatic hooks or global configuration.
-- **FR-007**: Add repeatable offline smoke tests and CI coverage for the tooling integration.
+- **FR-007**: Provide repeatable local smoke tests and verification commands. Remove GitHub Actions workflows and keep Actions disabled until explicitly requested by the user.
 
 ## Success Criteria
 
@@ -50,7 +52,7 @@ A clone has no current-feature pointer; contributors must select their feature. 
 
 ## Verification obligations
 
-Run the tooling suite, shell syntax checks, authored Markdown lint, and diff review. Review licenses, local-state exclusions, and the global lifecycle manually. Report editor sessions not exercised and any remote CI limitations.
+Run the tooling suite, shell syntax checks, authored Markdown lint, and diff review locally. Review licenses, local-state exclusions, and the global lifecycle manually. Report editor sessions not exercised. Remote CI is intentionally excluded.
 
 ## Assumptions
 

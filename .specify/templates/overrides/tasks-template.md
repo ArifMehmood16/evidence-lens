@@ -19,6 +19,8 @@ Repeat phases only for scoped stories. State dependencies and applicable recover
 
 ## Phase 3: Verification and completion
 
+Run checks locally. GitHub Actions tasks are out of scope unless explicitly requested by the user.
+
 - [ ] T004 Use ECC verification-loop and record commands, outcomes, acceptance mappings, and limitations in verification.md per Constitution V.
 - [ ] T005 Run applicable RAG/frontend/infrastructure checks from plan.md; record evidence or explain N/A in verification.md per Constitution III–IV.
 - [ ] T006 Reconcile documentation and affected specs, inspect the diff, and verify quickstart.md scenarios per plan.md.

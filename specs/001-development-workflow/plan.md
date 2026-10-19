@@ -18,10 +18,10 @@ No domain data-model.md or API contracts are needed: this feature adds repositor
 
 ## Affected paths
 
-.specify/, official speckit-* skill directories, existing ECC skills, AGENTS.md, documentation/PR entry points, specs/, tools/spec-kit-requirements.txt, tests/tooling/, third_party/spec-kit/LICENSE, and documentation CI.
+.specify/, official speckit-* skill directories, existing ECC skills, AGENTS.md, documentation/PR entry points, specs/, tools/spec-kit-requirements.txt, tests/tooling/, and third_party/spec-kit/LICENSE. The previously added documentation Actions workflow is removed under the user's amended scope.
 
 ## Verification and release gates
 
 Run ECC verification-loop, recording results in verification.md. Tests use isolated temporary projects, exercising official scripts rather than creating live feature state. Verify creation and override selection, existing-plan preservation, missing-prerequisite failure, and managed asset hashes across all editors. Run Markdown lint and shell syntax checks. Inspect tracked/untracked changes for local paths, secrets, and unintended code.
 
-CI runs the same offline tests. Real editor sessions and remote CI completion must be reported separately; script tests do not demonstrate LLM adherence. Convergence assesses all FR/SC obligations and adds tasks if required evidence is missing.
+Run verification locally. GitHub Actions remains disabled until the user explicitly requests it; remote CI completion is not a requirement. Real editor sessions must be reported separately; script tests do not demonstrate LLM adherence. Convergence assesses all FR/SC obligations and adds tasks if required local evidence is missing.

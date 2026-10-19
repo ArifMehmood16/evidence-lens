@@ -26,6 +26,7 @@ EvidenceLens is a practitioner evidence application in the design phase. Read RE
 
 ## Verification and release
 
+- Run checks locally. Do not create, enable, dispatch, or restore GitHub Actions workflows during project development unless the user explicitly instructs it. A roadmap milestone, toolkit default, or push is not authorization.
 - Use the verification-loop skill after substantial changes. Run applicable checks; report passed, failed, and not run honestly.
 - Test behavior, domain invariants, integration contracts, and recovery. Do not add meaningless tests to reach a percentage.
 - Read SECURITY.md for security reporting. Avoid committing secrets, private corpora, generated indexes, personal paths, or local editor state.

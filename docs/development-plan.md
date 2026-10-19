@@ -84,7 +84,7 @@ Create the locked test set described in the evaluation specification. Calibrate 
 
 **Estimate: 5–7 days. Dependency: Phase 4; infrastructure prototypes can begin after Phase 2.**
 
-Package container images, Terraform, separate API and worker roles, S3 storage, RDS, OpenSearch, and SQS adapters. Add managed secrets, authentication, rate limits, telemetry, billing tags, budgets, CI/CD, and a teardown procedure. Pin versions and verify local ARM64 and cloud image compatibility.
+Package container images, Terraform, separate API and worker roles, S3 storage, RDS, OpenSearch, and SQS adapters. Add managed secrets, authentication, rate limits, telemetry, billing tags, budgets, and a teardown procedure. Pin versions and verify local ARM64 and cloud image compatibility. CI/CD is deferred; GitHub Actions must not be introduced without the user's explicit instruction, even when this phase is reached. This future deployment phase is not authorization to deploy during current development.
 
 Implement exact-query caching with index/policy version keys. Demonstrate a source replacement and cache invalidation. Configure private networking for stateful services and least-privilege access. Establish the first cloud workload and test profile; validate throughput before enabling aggressive autoscaling.
 

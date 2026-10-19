@@ -8,6 +8,8 @@
 
 ## Checks performed
 
+Record local checks. GitHub Actions is deferred until the user explicitly requests it; its absence is not a missing verification result.
+
 - **[Check] — passed/failed/not run**: [command or manual procedure, outcome, reason if not run].
 
 Include applicable build/types/lint, behavior, security, diff/license, recovery, RAG baseline/candidate versions, and frontend checks. Explain N/A. Never include secrets, private questions, or licensed full source documents.

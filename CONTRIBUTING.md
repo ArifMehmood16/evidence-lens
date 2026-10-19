@@ -1,6 +1,8 @@
 # Contributing to EvidenceLens
 
-The repository currently contains the design and engineering foundation. Begin with README.md, AGENTS.md, and docs/development-plan.md. There is no application test/build command yet; commands will be documented alongside the first runnable implementation. The Documentation workflow checks authored Markdown, project skills/rules, Spec Kit workflow smoke tests, upstream asset integrity, and bundled shell syntax. It does not claim to run application tests or a security audit.
+The repository currently contains the design and engineering foundation. Begin with README.md, AGENTS.md, and docs/development-plan.md. There is no application test/build command yet; commands will be documented alongside the first runnable implementation. Run authored Markdown checks, tooling smoke tests, upstream asset integrity checks, and bundled shell syntax checks locally using docs/agent-tooling.md. These do not constitute application tests or a security audit.
+
+GitHub Actions is disabled for project development. Do not add, enable, or dispatch workflows until the project owner explicitly requests it. Keep local verification evidence with each change.
 
 For substantial behavior across any part of the application, follow the [Spec Kit + ECC workflow](docs/agent-tooling.md): specify → plan with ECC research → tasks → implement with ECC verification → converge. The [constitution](.specify/memory/constitution.md) governs completion. Keep requirements, decisions, tasks, and verification evidence together under specs/FEATURE/; use the [feature index](specs/README.md) to find existing work. Small behavior-preserving fixes may capture scope and evidence in the PR. Record lasting architectural decisions using docs/templates/architecture-decision.md.
 

@@ -34,6 +34,8 @@ Create data-model.md and contracts/ only when needed; explain N/A otherwise. Wri
 
 ## Verification and release gates
 
+Plan local verification only. Do not add or enable GitHub Actions unless the user explicitly requests it; roadmap milestones and toolkit defaults are not authorization.
+
 Use .agents/skills/verification-loop/SKILL.md during implementation and before completion. Save commands, outcomes, acceptance mappings, limitations, and checked revision/change scope in verification.md. Define required build/type/lint/behavior/security checks and justified N/A categories now.
 
 Evidence-affecting changes also use rag-change-evaluation with baseline/candidate corpus/model/config identifiers. Public frontend changes also use frontend-release-review. Infrastructure changes include deployment, health, rollback/recovery, and cost evidence appropriate to scope. A missing required check stays incomplete.
