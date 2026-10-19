@@ -2,7 +2,7 @@
 
 ## I. One workflow across the application
 
-Every substantial behavior, interface, infrastructure, or evaluation change MUST follow Spec Kit's specify → plan → tasks → implement → converge lifecycle. This applies to source admission, ingestion, retrieval, generation, APIs, practitioner UI, security, deployment, and operations. Canonical intent lives in specs/FEATURE/spec.md and plan.md; tasks.md tracks delivery. Architecture and roadmap documents provide context, not a competing backlog.
+Every substantial behavior, interface, infrastructure, or evaluation change MUST follow Spec Kit's specify → plan → tasks → implement → converge lifecycle. This applies throughout the application. Canonical application intent is the frozen master at docs/planning/master-plan-v1.0.0.md plus accepted child editions, resolved using docs/planning/README.md. Feature spec.md and plan.md elaborate named root F/W/AC IDs and must identify their root, parent, and edition. Sealed intent MUST NOT be edited; future changes require new child files. Tasks and verification track execution without rewriting accepted intent.
 
 ECC MUST operate inside this lifecycle: use .agents/skills/search-first/SKILL.md during planning and save reuse research in the feature's research.md; use .agents/skills/verification-loop/SKILL.md during implementation and save actual evidence in verification.md. Do not create separate ECC requirements or tasks. Small behavior-preserving fixes may record scope and evidence in their PR, while reconciling affected specifications.
 
@@ -30,8 +30,10 @@ Convergence MUST assess implementation and verification evidence against spec, p
 
 ## Governance
 
-AGENTS.md routes agents here; docs/engineering-standards.md holds detailed policy. Templates in .specify/templates/overrides/ implement these requirements for all integrations. Project policy takes precedence over generic toolkit examples. User instructions retain precedence. Amend the constitution and affected templates together; explain the change and migration in the PR. Version breaking governance changes as major, new principles as minor, and clarifications as patch. Keep feature specs current using Git history; never rewrite requirements merely to make failing work pass.
+AGENTS.md routes agents here; the frozen planning lineage governs accepted intent, including referenced engineering standards. Templates implement that policy for all integrations. Project policy takes precedence over generic toolkit examples; user instructions retain precedence. Amendments to accepted planning policy require a child edition; operational routing/templates may then be aligned without rewriting sealed files. Version breaking governance changes as major, new principles as minor, and clarifications as patch. Run the local planning-integrity check; never regenerate old manifest hashes to bless changes or rewrite criteria to make failing work pass.
 
 Amendment 1.1.0: the user's project-wide instruction defers GitHub Actions until explicitly requested. Existing workflow configuration is removed; verification remains local. No application migration is required.
 
-**Version**: 1.1.0 | **Ratified**: 2026-10-19 | **Last Amended**: 2026-10-19
+Amendment 2.0.0: the user requires a frozen master and child-only editions for future planning changes. This replaces the prior in-place specification-update policy. Existing planning sources are sealed with the master; working agent guidance is aligned to that new baseline.
+
+**Version**: 2.0.0 | **Ratified**: 2026-10-19 | **Last Amended**: 2026-10-19

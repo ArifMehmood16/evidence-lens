@@ -4,6 +4,8 @@
 
 **Input**: [user request and roadmap phase]
 
+**Planning lineage**: [original master link/version; immediate parent manifest/hash; child edition; affected F/W/AC IDs]. Read docs/planning/README.md. This file may be refined while draft; once sealed, change intent through a new child file/edition, never by editing this file.
+
 ## Problem and scope
 
 [Practitioner or operator need; current behavior; outcome; non-goals. Keep technology choices in plan.md.]

@@ -2,11 +2,11 @@
 
 Spec Kit owns the feature lifecycle; ECC contributes reuse research and verification inside it. This applies across the whole application, including ingestion, retrieval, generation, APIs, practitioner UI, evaluations, infrastructure, security, and operations. There is one specification and task list per feature.
 
-AGENTS.md is the entry point for all agents. The [constitution](../.specify/memory/constitution.md) defines shared governance; [engineering standards](engineering-standards.md) supply detail. Official editor integrations read the same constitution and resolve the same project template overrides. The [feature index](../specs/README.md) connects this workflow to the roadmap.
+AGENTS.md is the entry point for all agents. The [master plan](planning/master-plan-v1.0.0.md) and accepted [child editions](planning/README.md) define application intent. The [constitution](../.specify/memory/constitution.md) routes shared governance; the sealed [engineering standards](engineering-standards.md) supply baseline detail. Official editor integrations use the same constitution and overrides. The [feature index](../specs/README.md) connects this workflow to the master catalogue.
 
 ## Daily workflow
 
-1. **Specify:** use speckit-specify to capture a focused outcome, acceptance criteria, failure behavior, and required verification in specs/FEATURE/spec.md. Use speckit-clarify when material ambiguity remains.
+1. **Specify:** resolve the accepted planning lineage, then use speckit-specify in a new draft feature directory. Capture outcome, acceptance, failures, verification, original master/parent links, and F/W/AC IDs in spec.md. Use speckit-clarify for material ambiguity. Never run a rewriting command on a sealed spec/plan; create a child edition first.
 2. **Plan with ECC:** use speckit-plan and read .agents/skills/search-first/SKILL.md. Record reuse decisions, upstream sources, alternatives, licenses, and reasons for custom code in research.md. Plan.md consumes that research and defines actual interfaces, budgets, recovery, and checks.
 3. **Tasks:** use speckit-tasks. Tasks trace to requirements and include applicable testing and verification. Use speckit-analyze before substantial implementation to catch inconsistent or missing requirements.
 4. **Implement with ECC:** use speckit-implement for the scoped tasks. Read .agents/skills/verification-loop/SKILL.md and record commands, results, acceptance mappings, and limitations in verification.md. Apply rag-change-evaluation and frontend-release-review when relevant.
@@ -24,13 +24,14 @@ bash .specify/scripts/bash/check-prerequisites.sh --json --require-spec --requir
 
 The current-feature pointer, .specify/feature.json, is local and ignored. Do not rely on another contributor's last selection. Git branching is managed normally; the optional Spec Kit Git extension is not installed.
 
-Small behavior-preserving fixes can keep scope and verification in the PR. Changed behavior or contracts require updating the affected specification or creating a focused feature. Specs are living intent; Git preserves their history. Do not rewrite them to hide failed acceptance criteria.
+Small behavior-preserving fixes can keep scope and verification in the PR. Changes to accepted behavior, contracts, estimates, or criteria require a new child edition referencing the original master and immediate parent. Drafts may be refined before issuance; sealed spec/plan files are immutable. Task status and verification results track execution without rewriting intent. Follow [the edition procedure](planning/README.md), including local integrity checks and manifest sealing.
 
 ## Sources of truth and customization
 
 - .specify/memory/constitution.md: EvidenceLens governance, original Apache-2.0 material.
 - .specify/templates/overrides/: shared specification, plan, task, and verification templates. Spec Kit's resolver gives these precedence over bundled templates.
-- specs/FEATURE/: canonical intent, reuse research, delivery tasks, and verification evidence. Optional data-model/contracts artifacts need a concrete purpose.
+- docs/planning/: original frozen master, baseline manifest, and future child editions. Existing supporting planning documents are sealed as part of the baseline.
+- specs/FEATURE/: derived feature intent with root/parent/edition references, research, tasks, and verification. Accepted intent is sealed by an edition manifest; status/evidence remain execution records. Optional data-model/contracts artifacts need a concrete purpose.
 - docs/templates/architecture-decision.md: lasting decisions only; feature research links rather than duplicates them.
 - .agents/skills/search-first and verification-loop: selected ECC adaptations, integrated into the shared templates and constitution.
 - .agents/skills/rag-change-evaluation and frontend-release-review: original project skills, invoked within the same feature.
@@ -76,6 +77,7 @@ Run the tooling tests and lint after changes:
 
 ```sh
 python3 -m unittest discover -s tests/tooling -v
+python3 tools/check_planning.py
 npx --yes markdownlint-cli2@0.18.1
 for script in .specify/scripts/bash/*.sh; do
   bash -n "$script" || exit 1

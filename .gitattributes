@@ -1,0 +1,2 @@
+# Markdown's two-space hard breaks are intentional; markdownlint MD009 validates them.
+*.md whitespace=-blank-at-eol

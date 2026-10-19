@@ -2,6 +2,8 @@
 
 **Input**: This feature's spec.md, plan.md, research.md, and applicable contracts.
 
+**Traceability**: [master version, child edition, and F/W/AC IDs]. Tasks track execution and may update completion status; changes to accepted intent require a new child edition, not altered task wording that bypasses the frozen plan.
+
 Use stable T001-style IDs, [US1] story labels, exact paths, and requirement references. Replace examples with concrete tasks. Mark [P] only for independent work; this does not authorize spawning agents. Include meaningful tests required by the spec and constitution. Do not generate unused scaffolding.
 
 ## Phase 1: Prerequisites

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "edition": 0,
+  "root": "docs/planning/master-plan-v1.0.0.md",
+  "parent": null,
+  "issued": "2026-10-19",
+  "source_revision": "d09abf8316160a510ad818bf56d16648ddc3fcf7",
+  "files": {
+    "docs/planning/master-plan-v1.0.0.md": "bc7fcf469f7571480056906253ea1b58c20010d9d23f75aa6569ee0c6cc2bead",
+    "docs/planning/README.md": "ff4baab9e95878b6221d191515b06896550dc44c0be9e89cc83813b6cfcb24fc",
+    "docs/architecture.md": "5597bc3baef9dc3ecabd8f07006539100220d9ea74e176a6b577cbf650a2565d",
+    "docs/evaluation.md": "1b55c81f82d8420c56feec2628ac79bb12a76367075ee542e2e11d30bc3e837f",
+    "docs/scaling.md": "0885a08ddb32c0a6cf4580fa313a15acadaf1ee8dd147a3d88632cbe086d6364",
+    "docs/development-plan.md": "7a6aaaac1894823e26aa1ec439b3a5523440eb8c99bdc54715e9e6765b70400d",
+    "docs/engineering-standards.md": "07293c8a42a900a736fcc9e92edfca4a4cb8b58c61eff90c9469a5c8e150802d"
+  }
+}

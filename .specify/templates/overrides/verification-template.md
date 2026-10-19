@@ -2,6 +2,8 @@
 
 **Date**: [DATE] | **Checked scope**: [revision and any uncommitted changes]
 
+**Planning lineage**: [master version, child edition, and F/W/AC IDs]. Run python3 tools/check_planning.py locally. Keep accepted intent unchanged; scope changes need a new child edition.
+
 ## Acceptance evidence
 
 [Map FR/SC/story identifiers to tests, commands, measurements, and evidence paths.]

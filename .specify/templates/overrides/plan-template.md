@@ -2,6 +2,8 @@
 
 **Feature**: [identifier] | **Date**: [DATE] | **Spec**: [spec.md](spec.md)
 
+**Planning lineage**: [original master link/version; immediate parent; child edition; affected F/W/AC IDs]. Follow docs/planning/README.md. Seal accepted intent; future changes use new child files.
+
 ## Summary
 
 [Implementation approach and scope; requirement identifiers.]
@@ -40,7 +42,7 @@ Use .agents/skills/verification-loop/SKILL.md during implementation and before c
 
 Evidence-affecting changes also use rag-change-evaluation with baseline/candidate corpus/model/config identifiers. Public frontend changes also use frontend-release-review. Infrastructure changes include deployment, health, rollback/recovery, and cost evidence appropriate to scope. A missing required check stays incomplete.
 
-After implementation, converge against spec, plan, tasks, and verification.md. Append missing work to tasks.md, implement it, and refresh evidence. Reconcile changed contracts with affected earlier specs.
+After implementation, converge against accepted spec/plan, tasks, and verification.md. Append missing execution work, implement it, and refresh evidence. A changed contract or acceptance criterion requires a new child edition referencing the original master and affected earlier specs; never rewrite sealed files.
 
 ## Complexity Tracking
 

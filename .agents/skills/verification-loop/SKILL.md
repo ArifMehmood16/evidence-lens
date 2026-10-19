@@ -13,7 +13,7 @@ Run checks locally. Do not create, enable, or dispatch GitHub Actions unless the
 Adapted from affaan-m/ECC at 76aaa77df6adc5b889e689007bf99b9a4f74af34.
 See ../../../third_party/ecc/LICENSE and ../../../docs/agent-tooling.md.
 
-1. Inspect the diff and changed contracts. Read the relevant feature acceptance criteria and repository commands; do not assume npm or Python tooling is configured.
+1. Inspect the diff and changed contracts. Read the original master, applicable child editions, and feature acceptance IDs. Run python3 tools/check_planning.py locally; never repair a sealed-file failure by changing its old hash. Read repository commands; do not assume npm or application tooling is configured.
 2. Run the applicable formatter/linter, type checks, and build. Preserve command exit status. Documentation-only changes need document and link checks rather than a fabricated application build.
 3. Run behavior and integration tests appropriate to the change. For RAG configuration changes, use rag-change-evaluation. Do not manufacture tests to reach a coverage percentage.
 4. Run configured secret/dependency/security checks where relevant. Do not print discovered credentials. A grep for key-like strings is not a security audit.

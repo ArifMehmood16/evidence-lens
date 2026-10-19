@@ -28,7 +28,7 @@ flowchart LR
     Verify --> Brief[Evidence brief or evidence gap]
 ```
 
-Start with the [architecture](docs/architecture.md), then follow the [phased development plan](docs/development-plan.md). The [evaluation specification](docs/evaluation.md) defines how to establish quality, and the [scaling model](docs/scaling.md) separates measured milestones from the ten-million-document design exercise. An optional [interactive planning overview](planning/evidence-lens.canvas.tsx) provides navigation and a raw-vector sizing calculator for compatible Canvas hosts.
+Start with the [master development plan v1.0.0](docs/planning/master-plan-v1.0.0.md): 24 features, 72 work units, acceptance criteria, dependencies, release gates, and open decisions. The master and supporting planning documents are frozen; future intent changes use [child editions](docs/planning/README.md) referencing the original. The [architecture](docs/architecture.md), [phase estimates](docs/development-plan.md), [evaluation specification](docs/evaluation.md), and [scaling model](docs/scaling.md) provide baseline detail. The optional [interactive planning overview](planning/evidence-lens.canvas.tsx) is an earlier navigation/sizing aid, not the authoritative master.
 
 The initial workflow is a practitioner asking an evidence question or submitting a published claim. The application returns a structured brief with findings, population and formulation context, conflicting evidence, limitations, and passage-level citations. Public research and commentary are in scope; patient records and individual prescribing workflows are outside the initial product scope.
 

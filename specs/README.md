@@ -1,6 +1,6 @@
 # Feature index
 
-All substantial work uses the shared [Spec Kit + ECC lifecycle](../docs/agent-tooling.md). This index connects feature intent to the [roadmap](../docs/development-plan.md); it is not a second task list.
+All substantial work uses the shared [Spec Kit + ECC lifecycle](../docs/agent-tooling.md). The [original master](../docs/planning/master-plan-v1.0.0.md) now defines all 24 application features and 72 work units, with acceptance criteria and dependencies. Read accepted [child editions](../docs/planning/README.md) to resolve current intent. This index is navigation, not a second task list.
 
 ## Current feature
 
@@ -8,7 +8,7 @@ All substantial work uses the shared [Spec Kit + ECC lifecycle](../docs/agent-to
 
 ## Application coverage
 
-The application capabilities below remain planned. Create focused feature directories when their scope is ready; do not generate speculative full specifications for the whole roadmap at once.
+The application capabilities below remain planned. Their canonical breakdown is in the master. Create focused implementation specs as child elaborations with original F/W/AC references; do not duplicate the whole master or rewrite sealed intent. Detailed library/API choices remain just-in-time decisions with explicit readiness gates.
 
 - **Phase 0, evidence contract:** source admission, provenance, evidence schema, quality labels, corpus permissions, evaluation rubric. ECC research examines source/data and schema tooling; verification checks fixtures and evidence invariants.
 - **Phase 1, ingestion:** connectors, parsing/OCR, deduplication, versions, idempotency, retry/recovery, deletion. Research parser/queue/storage libraries; verify replay, partial failure, and provenance.
