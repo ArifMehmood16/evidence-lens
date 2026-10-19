@@ -27,3 +27,12 @@ jobs:
             .agents/**/*.md
             .github/**/*.md
             .cursor/**/*.mdc
+            .specify/memory/constitution.md
+            .specify/templates/overrides/*.md
+      - name: Verify Spec Kit workflow integration
+        run: python3 -m unittest discover -s tests/tooling -v
+      - name: Check bundled shell syntax
+        run: |
+          for script in .specify/scripts/bash/*.sh; do
+            bash -n "$script" || exit 1
+          done

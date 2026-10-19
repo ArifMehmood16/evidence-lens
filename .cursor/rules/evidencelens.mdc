@@ -8,5 +8,6 @@ alwaysApply: true
 Read and follow the repository root AGENTS.md. It is the shared source of truth across coding agents.
 Read docs/engineering-standards.md for standards relevant to the current change.
 Load only matching skills from .agents/skills; see docs/agent-tooling.md for their scope.
+Use the official .cursor/skills/speckit-* commands with .specify/memory/constitution.md and the shared template overrides. ECC uses the same feature artifacts.
 Prefer framework capabilities over custom boilerplate. Do not generate speculative services or abstractions.
 For example, use the selected validation library's schema handling rather than duplicating request-validation infrastructure.

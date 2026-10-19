@@ -15,7 +15,7 @@ See ../../../third_party/ecc/LICENSE and ../../../docs/agent-tooling.md.
 2. Check which search tools are available. Use official package documentation, registries, and upstream repositories for relevant candidates. Report unavailable channels without claiming a comprehensive search.
 3. Compare fit, maintenance, security, license, dependency weight, operational cost, and compatibility with the existing stack. Prefer existing dependencies and framework features where suitable.
 4. Choose reuse, a thin adapter, composition, or custom code. A library is not automatically better if it adds more complexity than the problem warrants.
-5. For a consequential choice, record the rationale using the repository ADR template. For a small change, explain it in the PR.
+5. Within Spec Kit planning, save decisions, sources, alternatives, and reuse rationale in the current feature's research.md; plan.md consumes those decisions. Do not create a second plan/backlog. For a consequential lasting choice, link an ADR using the repository template. For a small fix, explain it in the PR.
 6. Implement the smallest useful integration and validate observable behavior.
 
 Do not install tools just to complete this checklist. Do not create wrappers that merely rename every library method. Do not change global MCP servers, hooks, editor settings, or credentials. Ordinary research can run inline; this skill does not require delegation.

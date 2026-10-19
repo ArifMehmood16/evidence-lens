@@ -18,7 +18,7 @@ Keep one modular codebase initially, with separate API and worker execution wher
 
 ## Specification before expansion
 
-Each substantial feature needs a short specification containing the user problem, scope, data/API contracts, failure behavior, acceptance criteria, security considerations, observability, migration/rollback needs, and relevant evaluation cases. Small fixes can put these details in the issue or pull request rather than create a new document.
+Each substantial feature follows the repository-wide Spec Kit + ECC lifecycle in [agent-tooling.md](agent-tooling.md). Specifications capture the user problem, scope, contracts, failures, acceptance criteria, security, observability, recovery, and evaluation cases. Spec Kit owns spec/plan/tasks; ECC research and verification feed the same feature directory. The [constitution](../.specify/memory/constitution.md) and shared template overrides govern every application area. Small behavior-preserving fixes can capture scope and evidence in the PR.
 
 Use architecture decision records for choices that are costly to reverse. Changes to embeddings, chunking, prompts, thresholds, and index schemas must carry versioned configuration and evaluation evidence. No silent default changes that invalidate comparisons.
 

@@ -1,0 +1,2 @@
+# Specify CLI 1.2.2; reviewed source, never a moving branch.
+specify-cli @ git+https://github.com/github/spec-kit.git@74be0a63e93c7087c5b06556b7561810d8f78a45

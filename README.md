@@ -45,7 +45,7 @@ The core design uses Python and FastAPI, PostgreSQL, versioned object storage, O
 - Report quality, useful answer coverage, latency, reliability, and cost together.
 - Keep implementation small and purposeful; no speculative services or architecture for its own sake.
 
-Read the [engineering standards](docs/engineering-standards.md), [contribution workflow](CONTRIBUTING.md), and [agent guidance](AGENTS.md). Selected [ECC skills](docs/agent-tooling.md) are adapted and pinned locally, with their original MIT attribution retained.
+Read the [engineering standards](docs/engineering-standards.md), [contribution workflow](CONTRIBUTING.md), and [agent guidance](AGENTS.md). [Spec Kit and selected ECC skills](docs/agent-tooling.md) work together across the entire application: specifications and tasks guide delivery, reuse research informs design, and verification evidence gates completion. The [feature index](specs/README.md) links this workflow to every roadmap phase. Official Spec Kit integrations are included for Codex, Claude Code, and Cursor; upstream assets retain their MIT notices.
 
 ## Roadmap and current use
 
@@ -59,6 +59,6 @@ Focused feedback on evidence workflows, retrieval evaluation, and architecture i
 
 ## License and data
 
-Original project material is licensed under [Apache License 2.0](LICENSE), except where otherwise indicated. Selected ECC-derived skill files retain the [MIT license](third_party/ecc/LICENSE). Third-party libraries, models, datasets, and source documents keep their own licenses. Public accessibility does not establish redistribution permission; the project license does not relicense its evidence corpus.
+Original project material is licensed under [Apache License 2.0](LICENSE), except where otherwise indicated. Selected ECC-derived skills retain their [MIT license](third_party/ecc/LICENSE); generated Spec Kit assets retain their [MIT license](third_party/spec-kit/LICENSE). Third-party libraries, models, datasets, and source documents keep their own licenses. Public accessibility does not establish redistribution permission; the project license does not relicense its evidence corpus.
 
 Apache 2.0 is a permissive open-source license and permits proprietary derivatives subject to its terms.

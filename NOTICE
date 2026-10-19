@@ -7,3 +7,10 @@ The affected files are .agents/skills/search-first/SKILL.md and
 .agents/skills/verification-loop/SKILL.md.
 See third_party/ecc/LICENSE and docs/agent-tooling.md for attribution,
 the pinned source revision, and the adaptations made.
+
+This project includes generated assets from GitHub Spec Kit 1.2.2,
+Copyright GitHub, Inc., licensed under the MIT License.
+Upstream assets are recorded in .specify/integrations/*.manifest.json;
+the bundled workflow and constitution template metadata are also upstream.
+See third_party/spec-kit/LICENSE and docs/agent-tooling.md.
+EvidenceLens constitution and template overrides are original project policy.

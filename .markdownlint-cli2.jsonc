@@ -1,4 +1,20 @@
 {
+  "globs": [
+    "**/*.md",
+    ".agents/**/*.md",
+    ".github/**/*.md",
+    ".cursor/**/*.mdc",
+    ".specify/memory/constitution.md",
+    ".specify/templates/overrides/*.md"
+  ],
+  "ignores": [
+    ".tools/**",
+    "node_modules/**",
+    ".agents/skills/speckit-*/**",
+    ".claude/skills/speckit-*/**",
+    ".cursor/skills/speckit-*/**",
+    ".specify/templates/*.md"
+  ],
   "config": {
     "default": true,
     "MD013": false

@@ -4,6 +4,10 @@ Draft dated 19 October 2026. The project progresses through useful releases, wit
 
 The core portfolio release comprises Phases 0–5, approximately 28–43 focused engineering days. Phases 6–8 add approximately 19–31 days. The complete proposal is therefore 47–74 focused days before optional research extensions. At two to three focused days each week, plan roughly four to nine months, plus interruptions and external review. Re-estimate after Phase 2 using actual progress.
 
+## Delivery workflow for every phase
+
+All phases use the [Spec Kit + ECC workflow](agent-tooling.md), with feature scope and status tracked in the [feature index](../specs/README.md). Create focused specifications when each slice is ready, research reuse through ECC during planning, and require applicable verification before convergence. This applies throughout ingestion, RAG, practitioner UI, security, deployment, scaling, and operations. Roadmap phases are planning context; canonical feature tasks live under specs/.
+
 ## Phase 0 — Define the evidence contract
 
 **Estimate: 2–3 days. Dependency: none.**
