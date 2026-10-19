@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "edition": 1,
+  "root": "docs/planning/master-plan-v1.0.0.md",
+  "parent": "docs/planning/baseline.json",
+  "parent_sha256": "95ae423500d03f12b5770c980454dc9c07128c2048abe7847039dd6f0b734862",
+  "files": {
+    "docs/planning/editions/0001/edition.md": "fe7679d2449a3479645d2f2b20ca7209d41685dd56c6cff688e6a782ddbb14eb",
+    "specs/002-agent-readiness/spec.md": "ed4279e9969bfd9eb9f908bb4d9fb7582dbb25b9774c89b31cb64d74e5d11d11",
+    "specs/002-agent-readiness/plan.md": "f10e926f20beb690b770ad03f52e5bb2ca934b0caf5f0614fa6f7701723b5b9e"
+  },
+  "changes": [
+    {
+      "operation": "add",
+      "target": "P05.FR001",
+      "references": [
+        "P05",
+        "G07"
+      ],
+      "reason": "Provide native Claude routing to existing canonical project skills without procedural copies."
+    },
+    {
+      "operation": "add",
+      "target": "G07.FR001",
+      "references": [
+        "G07",
+        "P05"
+      ],
+      "reason": "Add read-only local readiness checks and explicit skill-context loading."
+    },
+    {
+      "operation": "add",
+      "target": "P08.FR001",
+      "references": [
+        "P08",
+        "G07"
+      ],
+      "reason": "Distinguish file configuration, actual loading, and observable application evidence."
+    }
+  ]
+}

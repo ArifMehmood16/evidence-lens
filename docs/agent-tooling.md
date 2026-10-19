@@ -6,6 +6,8 @@ AGENTS.md is the entry point for all agents. The [master plan](planning/master-p
 
 ## Daily workflow
 
+For substantial work, begin with the local preflight and actual stage/host. Its --context option prints the relevant skill bodies into the session; then follow them and record observable application evidence as described below. This operational contract is specified in [child edition 0001](planning/editions/0001/edition.md).
+
 1. **Specify:** resolve the accepted planning lineage, then use speckit-specify in a new draft feature directory. Capture outcome, acceptance, failures, verification, original master/parent links, and F/W/AC IDs in spec.md. Use speckit-clarify for material ambiguity. Never run a rewriting command on a sealed spec/plan; create a child edition first.
 2. **Plan with ECC:** use speckit-plan and read .agents/skills/search-first/SKILL.md. Record reuse decisions, upstream sources, alternatives, licenses, and reasons for custom code in research.md. Plan.md consumes that research and defines actual interfaces, budgets, recovery, and checks.
 3. **Tasks:** use speckit-tasks. Tasks trace to requirements and include applicable testing and verification. Use speckit-analyze before substantial implementation to catch inconsistent or missing requirements.
@@ -14,6 +16,34 @@ AGENTS.md is the entry point for all agents. The [master plan](planning/master-p
 6. **Review and release:** link the feature artifacts and evidence in the PR. Deployment, publication, and external actions remain subject to the user's authorized scope.
 
 For Codex, invoke skills as `$speckit-specify`, `$speckit-plan`, `$speckit-tasks`, `$speckit-implement`, and `$speckit-converge`. Claude Code and Cursor use their installed `/speckit-...` skills. Discovery can depend on the host version or opening a new session; explicitly reference the relevant SKILL.md if it is not listed.
+
+The four canonical project skills remain under .agents/skills. Claude Code has thin, project-prefixed /evidencelens-search-first, /evidencelens-verification-loop, /evidencelens-rag-change-evaluation, and /evidencelens-frontend-release-review entry points. Each instructs the agent to read the canonical file; no procedural body is duplicated. Current Cursor documentation supports .agents/skills directly, so no duplicate Cursor project-skill set is added. Other host settings or global skills can still affect what a session lists; use exact project paths when ambiguous.
+
+## Reliable skill loading and evidence
+
+Here, a host means the editor/agent environment, such as Codex, Claude Code, or Cursor, including its workspace/session settings. A committed skill proves only that guidance exists in the checkout. Discovery, context loading, and applying it to the task are separate events.
+
+Run from the repository root, choosing the actual host and stage:
+
+```sh
+python3 tools/agent_preflight.py --host codex --stage plan --context
+python3 tools/agent_preflight.py --host claude --stage verify --rag --context
+python3 tools/agent_preflight.py --host cursor --stage verify --frontend --context
+```
+
+The examples are alternatives, not instructions to claim three live-host tests. Stages are specify, plan, tasks, implement, verify, and converge. Add --rag or --frontend only when relevant. Output checks planning integrity, canonical/native routes, the selected upstream command hash, and disabled event configuration. It reports file paths/hashes and explicitly labels host discovery and application as unobserved/unverified. The --host argument is declared context, not authentication of the running editor.
+
+With --context, the command prints selected skill contents, giving the current agent an explicit loading path even if automatic discovery is unavailable. It does not invoke a model, run an entire workflow, or demonstrate that the agent followed the instructions. Apply the guidance and record path/hash, how it was loaded, concrete actions, and result/evidence locations in the feature verification report. For example, search-first should produce a real reuse decision in research.md; verification-loop should produce actual check commands and outcomes.
+
+For each host/version you use, a manual smoke prompt can establish session observations:
+
+> Read AGENTS.md. Run the local preflight for this host at stage verify with --context. Identify the canonical verification skill and its hash, then run the planning-integrity check. Report the observed result and distinguish configured skills, explicitly loaded context, and concrete application evidence. Do not modify files or claim results for another host.
+
+Keep the session/tool-output reference with the verification record. A successful session is evidence for that host/version/task, not all future sessions. Ordinary chats without repository/tool access need the relevant documents supplied through their available context workflow. No automatic hooks or GitHub Actions are required.
+
+Primary discovery references checked on 2026-10-19: [OpenAI skills](https://learn.chatgpt.com/docs/build-skills), [Claude Code skills](https://code.claude.com/docs/en/skills), and [Cursor skills](https://cursor.com/docs/skills).
+
+## Feature selection and completion
 
 For an existing feature, tell the agent its directory before working. Script users can explicitly select it with:
 
@@ -85,4 +115,4 @@ done
 git diff --check
 ```
 
-Ordinary ChatGPT chats do not automatically load repository files. Supply AGENTS.md, the constitution, relevant feature artifacts, and skills through the available repository/document workflow. Editor discovery and model adherence require review; a committed skill is not proof that every host executed it.
+Ordinary ChatGPT chats do not automatically load repository files. Supply AGENTS.md, the constitution, relevant feature artifacts, and skills through the available repository/document workflow. Use the explicit preflight/context path and observable verification evidence above to reduce reliance on automatic discovery; record untested host behavior honestly.

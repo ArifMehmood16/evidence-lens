@@ -5,6 +5,7 @@ All substantial work uses the shared [Spec Kit + ECC lifecycle](../docs/agent-to
 ## Current feature
 
 - [001 — Development workflow](001-development-workflow/spec.md): repository-wide Spec Kit/ECC integration. See its [verification](001-development-workflow/verification.md) for actual checks and limitations.
+- [002 — Agent readiness](002-agent-readiness/spec.md): child edition 0001 adds explicit skill loading, native Claude routes, and concrete use evidence. See its [verification](002-agent-readiness/verification.md); live-host discovery is not inferred from file checks.
 
 ## Application coverage
 

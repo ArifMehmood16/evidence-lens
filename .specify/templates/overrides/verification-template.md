@@ -8,7 +8,11 @@
 
 [Map FR/SC/story identifiers to tests, commands, measurements, and evidence paths.]
 
-## Checks performed
+## Guidance used
+
+[Declared host/version if known; preflight command and outcome; canonical skill paths and SHA-256 values; explicit read/invocation or observed discovery; concrete decisions/actions and evidence links. Keep file configuration, actual loading, and application evidence distinct. Mark other hosts not observed. A self-report or preflight pass alone is not proof of compliance.]
+
+## Check outcomes
 
 Record local checks. GitHub Actions is deferred until the user explicitly requests it; its absence is not a missing verification result.
 

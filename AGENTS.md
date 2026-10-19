@@ -4,6 +4,7 @@ EvidenceLens is a practitioner evidence application in the design phase. Read RE
 
 ## How to work
 
+- For substantial work, run python3 tools/agent_preflight.py with the actual --host and --stage (plus --rag/--frontend when relevant); use --context to explicitly load selected skill bodies. File checks prove configuration only. Record canonical path/hash, concrete application, and evidence in verification.md; do not claim unobserved host discovery or skill use.
 - Follow the user's current scope. Tie each change to a requirement, observed failure, or measurable need.
 - Search the repository and maintained libraries before writing boilerplate. Use the search-first skill for meaningful reuse/dependency decisions.
 - Build small vertical slices. Avoid speculative services, giant generated modules, redundant wrappers, unused abstractions, and broad unrelated refactors.
